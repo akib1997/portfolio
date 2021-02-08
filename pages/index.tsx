@@ -13,8 +13,14 @@ export default function Home() {
   return (
     <>
       <Head>
+        <meta charSet="UTF-8" />
         <title>Welcome | Shuaib Hasan Akib</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Shuaib hasan akib. Web developer, Frontend Developer, React Developer. Freelance web develope"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
       <motion.section className="banner min-h-screen flex items-center justify-center relative px-4">
@@ -48,7 +54,7 @@ export default function Home() {
           </motion.div>
           {/* Profile Image */}
           <motion.h1
-            initial={{ x: -100 }}
+            initial={{ x: -10 }}
             animate={{ x: 0 }}
             transition={{
               type: "tween",
@@ -60,18 +66,18 @@ export default function Home() {
           </motion.h1>
 
           <motion.h3
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 2, ease: "easeIn" }}
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeIn", type: "tween" }}
             className="text-3xl"
           >
             Frontend Developer
           </motion.h3>
-          <Ticker speed={5}>
+          <Ticker speed={4}>
             {() => (
               <h6 className="capitalize text-center text-sm whitespace-pre font-medium">
                 HTML, CSS, scss, bootstrap, tailwindcss, javascript, jquery,
-                react, nextjs, typescript.
+                reactjs, nextjs, typescript, wordpress, git, etc.
               </h6>
             )}
           </Ticker>

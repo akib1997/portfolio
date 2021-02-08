@@ -53,6 +53,7 @@ export default function Social() {
           >
             <a
               href={item.url === myEmail ? `mailto:${myEmail}` : item.url}
+              rel="noreferrer"
               target="_blank"
               className="text-2xl text-white"
             >

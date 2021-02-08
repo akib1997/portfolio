@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   SiAdobephotoshop,
   SiAdobexd,
@@ -30,9 +31,25 @@ function About() {
         <div className="lg:w-4/5 md:w-7/8 mx-auto">
           <div className="lg:flex items-center">
             <div className="lg:w-1/2 lg:pr-12 pr-6">
-              <h2 className="text-5xl font-bold mb-6">About Me</h2>
-              <p></p>
-              <p className="mb-5 text-xl text-justify">
+              <motion.h2
+                className="text-5xl font-bold mb-1"
+                initial={{ y: 30 }}
+                animate={{ y: 0 }}
+              >
+                About Me
+              </motion.h2>
+              <motion.p
+                className="mb-6 text-xl"
+                initial={{ y: 30 }}
+                animate={{ y: 0 }}
+              >
+                Short details about me
+              </motion.p>
+              <motion.p
+                className="mb-5 text-xl text-justify"
+                initial={{ y: 30 }}
+                animate={{ y: 0 }}
+              >
                 I'm Akib, 25 years old a Frontend Web-Developer. I've complited
                 my Master's degree in 2017 and have been working in this sector
                 for nearly 3 years now, and along with the common Frontend
@@ -40,7 +57,7 @@ function About() {
                 Tailwind, React, and NextJS. Also, when it comes to pure CSS and
                 JS, I have acquaintance with CSS architecture like BEM, OOCSS,
                 SMACSS, and Semantic Markup.
-              </p>
+              </motion.p>
               <p className="mb-5 text-xl text-justify">
                 I've already worked on more than 70+ projects with Fiverr and
                 Upwork. My maximum clients are very happy to work with me.
@@ -104,7 +121,6 @@ function About() {
                   </span>
                 </li>
               </ul>
-
               <h5 className="font-medium text-2xl mb-3">Additional Tools:</h5>
               <ul className="flex flex-wrap mb-6">
                 <li>
@@ -166,7 +182,6 @@ function About() {
                 </li>
               </ul>
               {/* <p>Hi, I'm Akib. A Frontend Developer with 2.5 years of expirience. working in Companiyes and Worked more than 70+ projects.</p> */}
-
               {/* <p className="mb-5 text-xl">
                 I'm Akib, a Frontend Web-Developer. I have been working in this
                 sector for nearly 3 years now, and along with the common
