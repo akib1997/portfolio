@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import projectData from "../data/ProjectData";
 import { motion } from "framer-motion";
-import { spawn } from "child_process";
 // import './../assets/'
 
 export default function Projects() {

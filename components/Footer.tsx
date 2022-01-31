@@ -26,7 +26,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <p className="text-center pt-16 pb-4">
+        <p className="text-center mt-16 pt-2 pb-4 border-t border-blue-50">
           Copyright &copy; 2017-2021. All rights reserved.
         </p>
       </div>

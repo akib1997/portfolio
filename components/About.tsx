@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { ArrowSmRightIcon } from "@heroicons/react/solid";
+
 import {
   SiAdobephotoshop,
   SiAdobexd,
@@ -22,43 +24,66 @@ import {
 } from "react-icons/fa";
 // import { IoLogoJavascript } from "react-icons/io";
 import { SiJquery, SiNextDotJs } from "react-icons/si";
+import { RiArrowRightSFill } from "react-icons/ri";
 
 import Image from "next/image";
+import React from "react";
 function About() {
+  const techs = [
+    { text: "HTML5, CSS3, SCSS." },
+    { text: "Bootstrap, Tailwind." },
+    { text: "Javascript(ES6+), Typescript." },
+    { text: "ReactJS, NextJS." },
+  ];
+  const techs2 = [
+    { text: "AntD, Material-UI, TailwindUI" },
+    { text: "Formik, React Hook Form." },
+    { text: "Redux, RTK, Context API" },
+    { text: "Storybook." },
+  ];
   return (
     <>
-      <div className="bg-blue-50 py-12 px-4">
-        <div className="lg:w-4/5 md:w-7/8 mx-auto">
-          <div className="lg:flex items-center">
-            <div className="lg:w-1/2 lg:pr-12 pr-6">
-              <motion.h2
-                className="text-5xl font-bold mb-1"
-                initial={{ y: 30 }}
-                animate={{ y: 0 }}
-              >
-                About Me
-              </motion.h2>
-              <motion.p
-                className="mb-6 text-xl"
-                initial={{ y: 30 }}
-                animate={{ y: 0 }}
-              >
-                Short details about me
-              </motion.p>
-              <motion.p
-                className="mb-5 text-xl text-justify"
-                initial={{ y: 30 }}
-                animate={{ y: 0 }}
-              >
-                I'm Akib, 25 years old a Frontend Web-Developer. I've complited
-                my Master's degree in 2017 and have been working in this sector
-                for nearly 3 years now, and along with the common Frontend
-                Technologies, I'm comfortable with frameworks like Bootstrap,
-                Tailwind, React, and NextJS. Also, when it comes to pure CSS and
-                JS, I have acquaintance with CSS architecture like BEM, OOCSS,
-                SMACSS, and Semantic Markup.
-              </motion.p>
-              <p className="mb-5 text-xl text-justify">
+      <div className="text-white py-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid items-center lg:grid-cols-2 gap-6">
+            <div className="">
+              <div className="flex items-center space-x-4 mb-6">
+                <h2 className="text-3xl font-bold mb-1">About Me</h2>
+                <span className="w-32 h-px bg-mainColor block"></span>
+              </div>
+
+              <p className="mb-3 text-justify">
+                Hello! My name is Akib and I enjoy creating things that live on
+                the internet. My interest in technology started back in 2017
+                then I started to try learning HTML, CSS!
+              </p>
+              <p className="mb-3 text-justify">
+                After completing my graduation in 2018, I start to focus on web
+                development with Bengali tutorials and docs then switched to
+                English resources.
+              </p>
+              <p className="mb-3 text-justify">
+                Here are a few technologies I’ve been working with recently:
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                <ul>
+                  {techs?.map((data, idx) => (
+                    <li className="flex items-center space-x-1 mb-1" key={idx}>
+                      <ArrowSmRightIcon className="w-4 h-4" />
+                      <p className="k"> {data.text} </p>
+                    </li>
+                  ))}
+                </ul>
+                <ul>
+                  {techs2?.map((data, idx) => (
+                    <li className="flex items-center space-x-1 mb-1" key={idx}>
+                      <ArrowSmRightIcon className="w-4 h-4" />
+                      <p className="k"> {data.text} </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              {/* <p className="mb-5 text-xl text-justify">
                 I've already worked on more than 70+ projects with Fiverr and
                 Upwork. My maximum clients are very happy to work with me.
               </p>
@@ -145,8 +170,8 @@ function About() {
                 </li>
               </ul>
               <h5 className="font-medium text-2xl mb-3">Graphics Tools:</h5>
-              <ul className="flex flex-wrap mb-6">
-                <li>
+              <ul className="flex flex-wrap mb-6"> */}
+              {/* <li>
                   <span className="text-4xl mr-3 mb-2 inline-block text-gray-900">
                     <SiAdobephotoshop />
                   </span>
@@ -158,7 +183,7 @@ function About() {
                 </li>
                 <li>
                   <span className="text-4xl mr-3 mb-2 inline-block text-red-900">
-                    {/* <SiFigma /> */}
+                    
                     <img
                       src="https://seeklogo.com/images/F/figma-logo-E4E21D3AEA-seeklogo.com.png"
                       className="w-7"
@@ -174,13 +199,13 @@ function About() {
                 <li>
                   <span className="text-4xl mr-3 mb-2 inline-block text-yellow-500">
                     <img
-                      src="https://zeplin.io/img/icZeplin.svg"
+                      src="https://cdn.zeplin.io/assets/lp/img/icZeplin.svg"
                       alt="Zeplin"
                       className="w-12"
                     />
                   </span>
                 </li>
-              </ul>
+              </ul> */}
               {/* <p>Hi, I'm Akib. A Frontend Developer with 2.5 years of expirience. working in Companiyes and Worked more than 70+ projects.</p> */}
               {/* <p className="mb-5 text-xl">
                 I'm Akib, a Frontend Web-Developer. I have been working in this
@@ -238,7 +263,7 @@ function About() {
               </ul>
               */}
             </div>
-            <div className="lg:w-1/2">
+            <div className="">
               {/* <Image
                 src="/assets/fiverr.png"
                 className="block"
@@ -248,7 +273,7 @@ function About() {
                 height={355}
                 quality="100"
               /> */}
-              <Image
+              {/* <Image
                 src="/assets/about-6.jpg"
                 className="w-full h-full my-8"
                 alt="Shuaib Hasan Akib"
@@ -256,7 +281,22 @@ function About() {
                 width={1000}
                 height={1000}
                 quality="100"
-              />
+              /> */}
+              <div className="">
+                <div className="w-80 group relative lg:ml-12 cursor-wait">
+                  <Image
+                    src="/assets/akib.JPG"
+                    className="object-cover relative rounded overflow-hidden"
+                    alt="Shuaib Hasan Akib"
+                    layout="responsive"
+                    width="320"
+                    height="360"
+                    quality="100"
+                    objectPosition={`center`}
+                  />
+                  <span className="group-hover:translate-x-3 group-hover:translate-y-3 transition-transform absolute inset-0 border-4 border-mainColor transform translate-x-6 translate-y-6 z-[-1] rounded"></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
