@@ -11,22 +11,22 @@ import Banner from "../components/Banner";
 import WorksHistory from "../components/WorksHistory";
 import MyProjects from "../components/MyProjects";
 
-export async function getStaticProps() {
-  const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENT_ACCESS_TOKEN,
-  });
+// export async function getStaticProps() {
+//   const client = createClient({
+//     space: process.env.CONTENTFUL_SPACE_ID,
+//     accessToken: process.env.CONTENT_ACCESS_TOKEN,
+//   });
 
-  const res = await client.getEntries({ content_type: "myProjects" });
+//   const res = await client.getEntries({ content_type: "myProjects" });
 
-  return {
-    props: {
-      projects: res.items,
-    },
-  };
-}
+//   return {
+//     props: {
+//       projects: res.items,
+//     },
+//   };
+// }
 
-export default function Home({ projects }) {
+export default function Home() {
   const [mount, setMount] = useState(false);
   useEffect(() => {
     setMount(true);
