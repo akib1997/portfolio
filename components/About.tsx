@@ -23,8 +23,8 @@ import {
   FaTrello,
 } from "react-icons/fa";
 // import { IoLogoJavascript } from "react-icons/io";
-import { SiJquery, SiNextDotJs } from "react-icons/si";
-import { RiArrowRightSFill } from "react-icons/ri";
+// import { SiJquery, SiNextDotJs } from "react-icons/si";
+// import { RiArrowRightSFill } from "react-icons/ri";
 
 import Image from "next/image";
 import React from "react";
